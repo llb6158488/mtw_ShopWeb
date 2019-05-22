@@ -1,0 +1,263 @@
+body {
+        min-width: 1200px;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+        margin : 0;
+        padding: 0;
+}
+
+table {
+        border-collapse: collapse;
+        border-spacing : 0;
+}
+
+fieldset,
+img {
+        border: 0
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+        font-style : normal;
+        font-weight: normal
+}
+
+ol,
+ul {
+        list-style: none
+}
+
+caption,
+th {
+        text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+        font-size: 100%;
+}
+
+a {
+        text-decoration: none;
+}
+
+q:before,
+q:after {
+        content: ''
+}
+
+abbr,
+acronym {
+        border: 0
+}
+
+
+
+.mar_auto {
+        margin: auto;
+}
+
+.pos_re {
+        position: relative;
+}
+
+
+.dis_b {
+        display: block;
+}
+
+.dis_ib {
+        display: inline-block;
+}
+
+.fll {
+        float: left;
+}
+
+.flr {
+        float: right;
+}
+
+.gray_black {
+        color: #2d2d2d;
+}
+
+.whiteColor {
+        color: #ffffff;
+}
+
+// .clearfix {
+//         overflow: auto;
+//         _height : 1%;
+// }
+
+.vertical_middle {
+        vertical-align: middle;
+}
+
+.vertical_sub {
+        vertical-align: sub;
+}
+
+.vertical_bottom {
+        vertical-align: bottom;
+}
+
+/*文字排版、颜色*/
+.f12 {
+        font-size: 12px
+}
+
+.f13 {
+        font-size: 13px;
+}
+
+.f14 {
+        font-size: 14px;
+}
+
+.f16 {
+        font-size: 16px;
+}
+
+.f18 {
+        font-size: 18px;
+}
+
+.f20 {
+        font-size: 20px;
+}
+
+.f_em1_5 {
+        font-size: 1.5em;
+}
+
+.f_em2_5 {
+        font-size: 2.5em;
+}
+
+.fb {
+        font-weight: bold;
+}
+
+.fn {
+        font-weight: normal;
+}
+
+.t2 {
+        text-indent: 2em;
+}
+
+.mt_color {
+        color: #009688;
+}
+
+.red,
+a.red {
+        color: #cc0031;
+}
+
+.darkblue,
+a.darkblue {
+        color: #039;
+}
+
+.gray,
+a.gray {
+        color: #878787;
+}
+
+.black,
+a.black {
+        color: #222222;
+}
+
+.lh160 {
+        line-height: 160%;
+}
+
+.lh180 {
+        line-height: 180%;
+}
+
+.lh200 {
+        line-height: 200%;
+}
+
+.unl {
+        text-decoration: underline;
+}
+
+.no_unl {
+        text-decoration: none;
+}
+
+.hover_unl:hover {
+        text-decoration: underline;
+}
+
+/*文档居中*/
+.textCenter {
+        text-align: center;
+}
+
+.textRight {
+        text-align: right;
+}
+
+.clearfix {
+        /* 为了照顾ie6浏览器*/
+        zoom: 1;
+
+        &::before {
+                content : "";
+                display : block;
+                height  : 0;
+                clear   : both;
+                overflow: hidden;
+                zoom    : 0;
+        }
+
+        &::after {
+                content : "";
+                display : block;
+                height  : 0;
+                clear   : both;
+                overflow: hidden;
+                zoom    : 0;
+        }
+}
