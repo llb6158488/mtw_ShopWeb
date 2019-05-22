@@ -6,33 +6,30 @@
             </div>
             <ul ref="listBox" class="clearfix">
                 <li class="items">
-                    <router-link to="/tblive">麦淘首页</router-link>
+                    <router-link to="/settled">麦淘首页</router-link>
                 </li>
-                <li class="items">
-                    <a :href="flag?tmrzTitle.href:tbrzTitle.href">服务项目</a>
-                </li>
-                <li class="items">
-                    <a href="#whyOpenTbLive">为什么开通淘宝直播</a>
-                </li>
-                <li class="items">
-                    <a href="#floatpermissions">什么是浮现权限</a>
-                </li>
-                <li class="items">
-                    <a href="#rzadvantage">入驻优势</a>
-                </li>
-                <li class="items">
-                    <a href="#cooperationFlow">合作流程</a>
+                <li class="items" v-for="(item,index) in this.navtop" :key="index">
+                    <a :href="item.href">{{item.text}}</a>
                 </li>
                 <li v-if="flag" class="items">
                     <a href="#question">常见问题</a>
                 </li>
                 <li class="items">
-                    <a href="#" class="activeborder">
+                    <a v-if="!flag" href="#" class="activeborder">
                         <img
                             class="smallqq"
                             src="../assets/Images/commonImgs/smallQQ.png"
                             alt="qqicon"
-                        >&nbsp;立即入驻
+                        >
+                        &nbsp;立即入驻
+                    </a>
+                     <a v-if="flag" href="#" class="activeborder">
+                        <img
+                            class="smallqq"
+                            src="../assets/Images/commonImgs/smallQQ.png"
+                            alt="qqicon"
+                        >
+                        &nbsp;在线客服咨询
                     </a>
                 </li>
             </ul>
@@ -45,8 +42,14 @@ export default {
     name: "settledNav",
     data() {
         return {
-            flag: false
+            flag: false,
+            navtop: null
         };
+    },
+    props: ["topType"],
+    created() {
+        //把获取的自定义属性保存到自己的data中
+        this.navtop = this.$props.topType;
     }
 };
 </script>
@@ -77,7 +80,7 @@ export default {
             height: 65px;
             line-height: 65px;
             float: left;
-            margin-left: 4.5%;
+            margin-left: 4%;
             @media screen and (max-width: 1215px) {
                 margin-left: 3.5%;
             }
@@ -112,7 +115,7 @@ export default {
             }
             .smallqq {
                 vertical-align: text-bottom;
-                margin-bottom: 1px;
+                margin-bottom: 2px;
             }
         }
     }

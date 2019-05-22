@@ -1,7 +1,7 @@
 <template id="aaa">
     <div class="settled">
         <!-- 头部导航栏 -->
-        <settledNav ref="nav" :style="{backgroundColor:'#2fc3b7'}"></settledNav>
+        <settledNav ref="nav" :topType="tmrzTitle" :style="{backgroundColor:'#2fc3b7'}"></settledNav>
         <div style="height:65px;"></div>
         <!-- banner -->
         <el-container class="mainBox">
@@ -380,15 +380,12 @@ export default {
                 { href: "#serviceProcess", text: "服务流程" },
                 { href: "#advantage", text: "我们的优势" },
                 { href: "#case", text: "入驻案例" },
-                { href: "#Aptitudes", text: "入住资质" },
-                { text: "在线客服咨询" }
+                { href: "#Aptitudes", text: "入住资质" }
             ]
         };
     },
     mounted() {
         this.$refs.nav.flag = true;
-        let navWidth = this.$refs.nav.$refs.listBox;
-        navWidth.style = "width:81%";
     }
 };
 

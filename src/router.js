@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import tblive from "./views/tblive";
-import { string } from 'postcss-selector-parser';
 Vue.use(Router)
 
 export default new Router({
@@ -9,7 +8,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/tblive',
+      path: '/',
       name: 'tblive',
       component: tblive
     },

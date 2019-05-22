@@ -1,6 +1,6 @@
 <template>
     <div class="tblive">
-        <settledNav></settledNav>
+        <settledNav :topType="tbrzTitle"></settledNav>
         <div style="height:65px;"></div>
         <!-- banner -->
         <div class="tblive-bg">
@@ -325,8 +325,7 @@ export default {
                 { href: "#whyOpenTbLive", text: "为什么开通淘宝直播" },
                 { href: "#floatpermissions", text: "什么是浮现权限" },
                 { href: "#rzadvantage", text: "入驻优势" },
-                { href: "#cooperationFlow", text: "合作流程" },
-                { text: "立即入驻" }
+                { href: "#cooperationFlow", text: "合作流程" }
             ]
         };
     }
